@@ -53,10 +53,10 @@ function cgSecNavCont(currNav) {
 	})
 }
 //查看购物车内容
-$(".chart").on("mouseover",function(){
+$(".webHeader").on("mouseover",".chart",function(){
 	$(".show-chart").show();
 });
-$(".chart").on("mouseleave",function(){
+$(".webHeader").on("mouseleave",".chart",function(){
 	$(".show-chart").hide();
 })
 

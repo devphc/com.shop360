@@ -12,7 +12,7 @@ body{
 	height:45px;
 	margin: 0 auto;
 }
-.crumbs-box a,span{
+.crumbs-box a,.crumbs-box span{
 	font-size: 14px;
 	font-family: "微软雅黑";
 	line-height: 45px;
@@ -64,27 +64,33 @@ body{
 }
 .goods-showbox{
 	width: 1240px;
-	height: auto;
+	overflow: hidden;
 	margin: 20px auto;
 	font-family: "微软雅黑";
+	position: relative;
 }
 .goods-showbox ul{
 	width: 100%;
-	height: auto;
+	overflow: hidden;
 }
 .goods-showbox ul li{
 	width: 240px;
 	height: 300px;
 	float: left;
-	margin: 3px 4px;
+	margin: 3px;
 	background: #FFFFFF;
 	overflow: hidden;
+	cursor: pointer;
 	left: 0;
 	top: 0;
 }
+.goods-showbox-active{
+	border: 1px solid #E8E8E8;
+	border-bottom: none;
+}
 .list-product-card{
 	width: 240px;
-	height: 356px;
+	height: 300px;
 }
 .list-product-card dl{
 	width: 240px;
@@ -123,10 +129,12 @@ body{
 .list-product-card dl dd a span{
 	color: #31373c;
 	display: block;
-	width: 95%;
+	width: 200px;
 	height: 24px;
+	font-size: 14px;
 	line-height: 24px;
 	overflow: hidden;
+	margin: 0 auto;
 }
 .list-product-card dl dd a b{
 	color: #fa5437;
@@ -135,4 +143,33 @@ body{
 	width: 100%;
 	height: 24px;
 	line-height: 24px;
+}
+.addtocart{
+	width: 240px;
+	height: 70px;
+	position: absolute;
+	background: #FFFFFF;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 4;
+	border: 1px solid #E8E8E8;
+	border-top: none;
+}
+.addtocart a{
+	color: #fff;
+    display: block;
+    font-size: 14px;
+    height: 37px;
+    line-height: 35px;
+    margin: 20px auto;
+    text-align: center;
+    width: 150px;
+}
+.addtocart a:hover{
+	background-position: 0 -55px;
+}
+.addtocat-ico{
+	background: url(http://p8.qhimg.com/t01ae1c5aba7b8e126a.gif) no-repeat;
+    text-indent: -999em;
 }
