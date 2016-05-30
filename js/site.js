@@ -66,10 +66,12 @@ $(document).ready(function(){
 	$(window).scroll(function (){
 		if (navOffsetTop <= $(window).scrollTop()) {
 			$(".top-navbar").addClass("top-navbar-absolute");
-			$(document.body).css({"margin-top":$(".top-navbar").css("height")});
+			$(document.body).css({"margin-top":$(".top-navbar").css("height")});  //滚动更加顺畅，不会跳动
+			$("#secondNav").css({top:96});  //二级菜单的定位问题
 		}else{
 			$(".top-navbar").removeClass("top-navbar-absolute");
-			$(document.body).css({"margin-top":0});
+			$(document.body).css({"margin-top":0});  //重新回到原来的位置
+			$("#secondNav").css({top:193});
 		}
 	});
 });
