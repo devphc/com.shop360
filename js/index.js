@@ -1,3 +1,5 @@
+//加载头部文件
+loadHtml("./html/header.html",".webHeader");
 //图片鼠标滑过之后有移动的效果
 $(".product-content-list ul li img").on("mouseover",function(){
 	$(this).stop().animate({margin:"0 10px"},500);

@@ -1,3 +1,4 @@
+
 .top-bar{
 	width: 100%;
 	background: #363636;
@@ -108,7 +109,7 @@
 }
 .top-navbar .container{
 	width: 1240px;
-	height: auto;
+	height: 97px;
 	margin: 0 auto;
 }
 .header-logo{
@@ -235,6 +236,7 @@
 	height: 345px;
 	display: none;
 	background: #FFFFFF;
+	z-index: 4;
 }
 .top-nav-search-box .goodslist ul{
 	height:  auto;

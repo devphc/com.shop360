@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表页</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/site.css" />
+		<link rel="stylesheet" type="text/css" href="css/goodslist.css" />
+	</head>
+
+	<body>
+		<!--头部文件-->
+		<div class="webHeader"></div>
+		<!--导航条-->
+		<div id="fixNavbar" class="top-navbar">
+			<div class="container">
+				<div class="header-logo">
+					<a href="#"><img src="images/logo.png" /></a>
+				</div>
+				<div class="top-nav-bar">
+					<ul>
+						<li currNav="phone"><a href="#">手机</a></li>
+						<li currNav="carCorder"><a href="#">行车记录仪</a></li>
+						<li currNav="watch"><a href="#">儿童手表</a><i class="ico-new"></i></li>
+						<li currNav="recorder"><a href="#">摄像机</a></li>
+						<li currNav="router"><a href="#">路由器</a></li>
+						<li><a href="#">掌上抢</a></li>
+						<li><a href="#">一元夺宝</a></li>
+						<li><a href="#">试用</a><i class="ico-free"></i></li>
+						<li><a href="#">社区</a></li>
+						<li>
+							<div class="top-nav-search-box">
+								<input class="top-nav-search-box-input" type="text" name="" id="searchbox" value="" placeholder="请输入关键字" />
+								<input class="top-nav-search-box-submit" type="submit" name="" id="" value="" />
+								<div id="goodsList" class="goodslist">
+									<ul>
+
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#"><img src="images/get_redbag.jpg" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--二级展示菜单-->
+			<div id="secondNav" class="nav-second-show">
+				<div id="secNavContainer" class="container">
+					<ul>
+						<li>
+							<img src="images/nav-sec-img1.jpg" />
+							<span>360手机N4</span>
+							<i>899元</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--导航条结束-->
+		<!--面包屑-->
+		<div class="crumbs">
+			<div class="crumbs-box">
+				<a href="index.html">首页</a>>
+				<a href="#">全部搜索结果</a>>
+				<span>全部</span>
+			</div>
+		</div>
+		<!--分类-->
+		<div class="category">
+			<div class="category-aline">
+				<b>分类:</b>
+				<a href="#">智能家居</a>
+				<a href="#">智能穿戴</a>
+				<a href="#">娱乐影音</a>
+				<a href="#">手机/配件</a>
+				<a href="#">电脑/游戏</a>
+				<a href="#">智能车品</a>
+				<a href="#">无人机/机器人</a>
+			</div>
+			<div class="category-aline">
+				<b>品牌:</b>
+				<a href="#">360</a>
+				<a href="#">JBL</a>
+				<a href="#">罗技</a>
+				<a href="#">纽曼</a>
+				<a href="#">黑爵</a>
+				<a href="#">阿思翠</a>
+				<a href="#">奇酷</a>
+				<a href="#">乐心</a>
+				<a href="#">小白熊</a>
+			</div>
+			<div class="category-aline">
+				<b>排序:</b>
+				<a href="#">默认</a>
+				<a href="#">价格</a>
+				<span class="select-not">
+					<label>
+						<input type="checkbox" name="" id="" value="" />
+						仅看有货产品
+					</label>
+				</span>
+			</div>
+		</div>
+
+
+		<script src="js/jquery-1.12.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/site.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/goodslist.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
