@@ -41,7 +41,7 @@ getGoods(0);
 $("#productsList").on("mouseenter", "li", function() {
 
 		//设置购买按钮的位置，并且赋给当前按钮当前的商品id值
-		iLeft = $(this).offset().left - $(this).parent().offset().left;
+		iLeft = $(this).offset().left - $(this).parent().offset().left -1;
 		iTop = $(this).offset().top + parseInt($(this).css("height")) - $(this).parent().offset().top;
 		$("#addToCart").show();
 		$("#addToCart").css({
