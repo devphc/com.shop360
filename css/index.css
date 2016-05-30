@@ -1,0 +1,418 @@
+.navi-banner-box{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.navi-banner-container{
+	width: 1240px;
+	height: 450px;
+	margin: 0 auto;
+}
+.navi-left-container{
+	width: 240px;
+	height: 450px;
+	overflow: hidden;
+	float: left;
+	background: #080504;
+	position: relative;
+}
+.navi-left-container ul{
+	overflow: hidden;
+	width: 100%;
+	padding: 20px 0;
+}
+.navi-left-container ul li{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	position: relative;
+	cursor: pointer;
+}
+.navi-left-container ul li:hover{
+	background: #CCCCCC;
+}
+.navi-left-container ul li a{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #FFFFFF;
+	padding-left: 36px;
+	margin-left: 30px;
+}
+.navi-left-container ul li a:after{
+	background: url(../images/navi-arrow.png) no-repeat right center;
+	content: "";
+	height: 13px;
+	width: 8px;
+	position: absolute;
+	right: 23px;
+	top: 20px;
+	
+}
+
+.navi-ico-all a{
+	background: url(../images/navi-bre-a.png) no-repeat;
+}
+.navi-ico-all:hover a{
+	background: url(../images/navi-bre-h.png) no-repeat;
+}
+.navi-ico-phone a{
+	background:url(../images/navi-phone-a.png) no-repeat;
+}
+.navi-ico-phone:hover a{
+	background: url(../images/navi-phone-h.png) no-repeat;
+}
+.navi-ico-watch a{
+	background: url(../images/nav-watch-a.png) no-repeat;
+}
+.navi-ico-watch:hover a{
+	background: url(../images/nav-watch-h.png) no-repeat;
+}
+.navi-ico-intel a{
+	background: url(../images/navi-intelequ-a.png) no-repeat;
+}
+.navi-ico-intel:hover a{
+	background: url(../images/navi-intelequ-h.png) no-repeat;
+}
+.navi-ico-car a{
+	background: url(../images/nav-car-a.png) no-repeat;
+}
+.navi-ico-car:hover a{
+	background: url(../images/nav-car-h.png) no-repeat;
+}
+.navi-ico-music a{
+	background: url(../images/nav-hear-a.png) no-repeat;
+}
+.navi-ico-music:hover a{
+	background: url(../images/nav-hear-h.png) no-repeat;
+}
+.navi-ico-computer a{
+	background: url(../images/nav-computer-h.png) no-repeat;
+}
+.navi-ico-robot a{
+	background: url(../images/nav-robot-h.png) no-repeat;
+}
+.navi-right-continer{
+	width: 1000px;
+	overflow: hidden;
+	height: 450px;
+	position: relative;
+}
+.navi-right-continer ul{
+	width: 5000px;
+	height: 450px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.navi-right-continer ul li{
+	width: 1000px;
+	height: 450px;
+	float: left;
+	cursor: pointer;
+}
+.navi-right-continer ul li img{
+	width: 1000px;
+}
+.navi-right-continer .left-arrow{
+	background: url(../images/banner-left-arrow.png) no-repeat left center;
+	position: absolute;
+	width: 39px;
+	height: 450px;
+	float: left;
+	left: 10px;
+	top: 0;
+	z-index: 3;
+	cursor: pointer;
+}
+.navi-right-continer .left-arrow:hover{
+	background: url(../images/banner-left-arrow-h.png) no-repeat left center;
+}
+.navi-right-continer .right-arrow{
+	background: url(../images/banner-right-arrow.png) no-repeat left center;
+	position: absolute;
+	width: 39px;
+	height: 450px;
+	float: right;
+	right: 10px;
+	top: 0;
+	z-index: 3;
+	cursor: pointer;
+}
+.navi-right-continer .right-arrow:hover{
+	background: url(../images/banner-right-arrow-h.png) no-repeat left center;
+}
+.navi-right-continer-counter{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	width: 175px;
+	height: 28px;
+	transform: translateX(-50%);
+}
+.navi-right-continer-counter a{
+	background: rgba(0,0,0,.3);
+    border-radius: 10px;
+    display: inline-block;
+    height: 12px;
+    margin: 1px 15px 1px 0;
+    vertical-align: top;
+    width: 12px;
+}
+.navi-right-continer-counter .active{
+	background: #FFFFFF;
+	border: 1px solid #005AA0;
+}
+
+
+.part-stars{
+	width: 100%;
+	height: 343px;
+	overflow: hidden;
+	text-align: center;
+}
+.part-stars-contains{
+	width: 1240px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.part-stars-contains ul{
+	overflow: hidden;
+}
+.part-stars-contains ul li{
+	width: 310px;
+	overflow: hidden;
+	float: left;
+}
+.part-stars-contains ul li img{
+	opacity:.9;
+}
+.part-stars-contains ul li img:hover{
+	opacity: 1;
+}
+
+.part-popular{
+	width: 1240px;
+	height: 433px;
+	overflow: hidden;
+	margin: 20px auto 0;
+}
+.part-popular-menu{
+	overflow: hidden;
+}
+.part-popular-menu b{
+	font-family: "微软雅黑";
+	color: #31373c;
+	float: left;
+	font-size: 24px;
+}
+.part-popular-menu .rollmenu{
+	float: right;
+	height: 28px;
+	width: 160px;
+}
+.popular-left-arrow{
+	background: url(../images/ico-pop-left-arrow.png) no-repeat;
+    display: inline-block;
+    float: left;
+    height: 28px;
+    width: 29px;
+}
+.popular-left-arrow:hover{
+	background: url(../images/ico-pop-left-arrow-h.png) no-repeat;
+}
+.part-popular-menu .rollmenu ul{
+	float: left;
+	margin: 10px 0 0 15px;
+	font-size: 0;
+}
+.part-popular-menu .rollmenu ul li{
+	background: #DDDDDD;
+	border-radius: 50%;
+	display: inline-block;
+	height: 6px;
+	width: 6px;
+	margin-right: 15px;
+}
+.part-popular-menu .rollmenu .active{
+	background: #23ac38;
+}
+.popular-right-arrow{
+	background: url(../images/ico-pop-right-arrow.png) no-repeat;
+    display: inline-block;
+    float: left;
+    height: 28px;
+    width: 29px;
+}
+.popular-right-arrow:hover{
+	background: url(../images/ico-pop-right-arrow-h.png) no-repeat;
+}
+
+.pop-tabbox{
+	width: 1238px;
+	height: 382px;
+	margin-top: 10px;
+	border: 1px solid #DDDDDD;
+	position: relative;
+	font-family: "微软雅黑";
+}
+.pop-tabbox ul{
+	position: absolute;
+	height:382px;
+	width: 2000px;
+	left: 0;
+	top: 0;
+}
+.pop-tabbox ul li{
+	float: left;
+	border-left: 1px solid #DDDDDD;
+	width: 309px;
+	height: 382px;
+	text-align: center;
+}
+#list-noleft-border{
+	border: none;
+}
+.pop-tabbox ul li a{
+	display: block;
+	padding: 20px 0px 0px 30px;
+	text-align: left;
+}
+.pop-tabbox ul li a p b{
+	font-size: 16px;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	color: #31373c;
+	
+}
+.pop-tabbox ul li a p em{
+	color: #848484;
+	height: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 13px;
+}
+.pop-tabbox ul li a p span{
+	color: #ee4a25;
+	font-size: 14px;
+	display: block;
+	margin-top: 6px;
+}
+.pop-tabbox ul li img{
+	width: 90%;
+}
+.part-smart{
+	width: 1240px;
+	height: 650px;
+	margin: 20px auto 0;
+}
+.part-apart{
+	width: 1240px;
+	overflow: hidden;
+	margin: 20px auto 0;
+}
+.part-more{
+	float: right;
+	font-family: "微软雅黑";
+	background: url(../images/ico-part-smart-more.png) no-repeat right center;
+    color: #848484;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 5px;
+    padding-right: 30px;
+}
+.part-more:hover{
+	background: url(../images/ico-part-smart-more-h.png) no-repeat right center;
+	color: #23ac38;
+}
+.part-products-list{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.product-left-ad{
+	float: left;
+	width: 310px;
+	height: 600px;
+}
+.product-left-ad img{
+	display: block;
+	width: 100%;
+	opacity: .9;
+}
+.product-left-ad img:hover{
+	opacity: 1;
+}
+.product-content-list{
+	float: left;
+	width: 930px;
+	height: 600px;
+	border-top: 1px solid #DDDDDD;
+}
+.product-content-list ul{
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+}
+.product-content-list ul li{
+	width: 231.5px;
+	height: 298px;
+	float: left;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	text-align: center;
+}
+.product-content-list ul li a{
+	display: block;
+	padding: 20px;
+	font-family: "微软雅黑";
+	text-align: left;
+}
+.product-content-list ul li a p	b{
+	display: block;
+	font-size: 16px;
+	color: #31373c;
+	height: 20px;
+	line-height: 20px;
+}
+.product-content-list ul li a p em{
+	font-size: 13px;
+	color: #848484;
+	margin-top: 6px;
+	height: 20px;
+	line-height: 20px;
+	display: block;
+}
+.product-content-list ul li a p span{
+	font-size: 14px;
+	display: block;
+	color: #ee4a25;
+	margin-top: 6px;
+}
+.product-content-list ul li img{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.part-free-try{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.part-free-try a{
+	float: left;
+	border: 1px solid #E8E8E8;
+}
+.part-free-try a img{
+	opacity: .9;
+}
+.part-free-try a:hover img{
+	opacity: 1;
+}
+.free-img{
+	margin-left: 10px;
+}
