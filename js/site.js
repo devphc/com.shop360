@@ -66,9 +66,10 @@ $(document).ready(function(){
 	$(window).scroll(function (){
 		if (navOffsetTop <= $(window).scrollTop()) {
 			$(".top-navbar").addClass("top-navbar-absolute");
-			$(body).css({"margin-top":$(".top-navbar").css("height")});
+			$(document.body).css({"margin-top":$(".top-navbar").css("height")});
 		}else{
 			$(".top-navbar").removeClass("top-navbar-absolute");
+			$(document.body).css({"margin-top":0});
 		}
 	});
 });
