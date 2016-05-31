@@ -131,6 +131,7 @@ div.zoomMask {
 .intro-tr{
 	margin-top: 25px;
     padding-bottom: 8px;
+   	overflow: hidden;
 }
 .intro-tr strong{
 	color: #0e0e0e;
@@ -279,3 +280,219 @@ div.zoomMask {
     line-height: 30px;
     vertical-align: middle;
 }
+.item-show-addtocart{
+	background: #fd532d;
+	border-radius: 2px;
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 240px;
+}
+.item-show-btn-ico{
+	background-image: url(http://p3.qhimg.com/t01eb758e784660b859.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    margin-right: .5em;
+    vertical-align: middle;
+    width: 20px;
+}
+.item-show-btn-add{
+	background-position: 0 0;
+}
+.item-show-like{
+	background: #adadad;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 16px;
+    text-align: center;
+    width: 150px;
+}
+.item-show-like:hover{
+	background: #c8c8c8;
+    color: #fff;
+}
+.item-show-like:hover span{
+	background-position: 0 -40px;
+}
+.item-show-btn-like{
+	background-position: 0 -20px;
+}
+.guarentee li{
+	color: #848484;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 36px;
+    background: url(../images/ico-itemshow-1.png) no-repeat;
+}
+.guarentee .at7{
+	background-position: 0 -50px;
+}
+.guarentee .at15{
+	background-position: 0 -98px;
+	
+}
+.dp_wrap_title{
+	font-family: "微软雅黑";
+	clear: both;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1240px;
+}
+.dp-recommend{
+	width: 1240px;
+	height: 250px;
+	margin: 0 auto;
+	border: 1px solid #E5E5E5;
+}
+.dp-recommend ul{
+	width: 100%;
+	overflow: hidden;
+}
+.dp-recommend ul li{
+	float: left;
+	width: 210px;
+	height: 245px;
+}
+.dp-recommend ul li i{
+	color: #D2D2D2;
+    float: left;
+    font-size: 40px;
+    height: 245px;
+    line-height: 245px;
+    width: 30px;
+    text-align: center;
+}
+.dp_p_pre{
+	background-color: #FEFEFE;
+    border-right: 1px solid #E5E5E5;
+}
+.dp_p_wrap{
+	width: 162px;
+	height: 243px;
+	float: left;
+}
+.dp_p_wrapimg{
+	display: block;
+    height: 120px;
+    margin: 40px auto 15px;
+    width: 120px;
+}
+.dp_p_wrapimg img{
+	height: 120px;
+    vertical-align: top;
+    width: 120px;
+}
+.dp_p_pname{
+	font: 14px/1.5 "微软雅黑";
+	display: block;
+    padding: 0 5px;
+    text-align: center;
+    color: #666666;
+}
+.dp_p_price{
+	color: #F63C30;
+    margin-top: 5px;
+    text-align: center;
+}
+.dp_number{
+	margin-top: 70px;
+	font-size: 14px;
+	text-align: center;
+	font-family: "微软雅黑";
+	color: #666666;
+}
+.dp_price{
+	margin: 10px 0;
+	text-align: center;
+	font-family: "微软雅黑";
+	color: #666666;
+}
+.dp_price span{
+	color: #F63C30;
+    display: inline-block;
+    font-size: 16px;
+}
+.dp_addcart{
+	font-family: "微软雅黑";
+	text-align: center;
+	font-size: 14px;
+	background-color: #F63C30;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 30px;
+    margin-left: 40px;
+}
+.nav-stair{
+	font-family: "微软雅黑";
+	width: 100$;
+	height: 60px;
+	border: 1px solid #E8E8E8;
+	border-left: none;
+	border-right: none;
+	margin-top: 20px;
+	background: #FFFFFF;
+}
+.nav-stair-wrap{
+	width: 1240px;
+	height: 60px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.nav-stair-wrap a{
+	font-size: 18px;
+	color: #31373c;
+	line-height: 60px;
+}
+.nav-stair-wrap a:hover{
+	color: #6ec177;
+}
+.nav-stair-wrap a:before{
+	content: "/";
+	color: #DCDCDC;
+	margin: 0 15px;
+}
+.product-detail{
+	width: 1000px;
+	overflow: hidden;
+	margin: 20px auto 0;
+}
+.product-detail img{
+	width: 100%;
+}
+.product_gTit{
+	font-family: "微软雅黑";
+	background: #fff;
+    border-bottom: 1px #e6e9ed solid;
+    color: #000;
+    font-size: 20px;
+    height: 49px;
+    line-height: 49px;
+    margin: 0 auto 20px;
+    width: 1240px;
+}
+.product-param{
+	width: 1000px;
+	margin-top: 10px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.product-param img{
+	width: 100%;
+}
+
