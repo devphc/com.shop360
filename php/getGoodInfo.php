@@ -51,14 +51,27 @@ function getGoodInfo($item_id){
     //获取标题
     $titleReg = '#<div class="tr nobdr"> <strong>(.*?)</strong>#';
     preg_match_all($titleReg,$contents,$title);
-
-    $goodInfo = array('title'=>$title[1][0],'tinyimg'=>$tinyImgs,'introimg'=>$introImgs,'price'=>$price[1][0]);
+	
+	//返回成功标志
+	$success = 1;
+	
+    $goodInfo = array('success'=>$success,'title'=>$title[1][0],'tinyimg'=>$tinyImgs,'introimg'=>$introImgs,'price'=>$price[1][0]);
     return json_encode($goodInfo);
 }
 
+//判断用户是否传送callback函数名，默认为callback
 $callback = "callback";
 if(isset($_GET["callback"])){
     $callback = $_GET["callback"];
 }
 
-exit ($callback."(".getGoodInfo("55f28dcb5efb11111f8b456b").")");
+//判断用户是否传送商品id
+if(isset($_GET["item_id"])){
+    exit ($callback."(".getGoodInfo($_GET["item_id"]).")");
+}else{
+	//为传送商品id，返回失败
+	$goodInfo = array('success'=>0);
+	exit (json_encode($goodInfo));
+}
+
+

@@ -1,0 +1,281 @@
+.good-intro {
+	width: 100%;
+	overflow: hidden;
+	border-top: 1px solid #E8E8E8;
+}
+
+.good-intro-box {
+	width: 1240px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.good-pic-box{
+	width: 620px;
+	height: 580px;
+	padding-top: 20px;
+	float: left;
+	text-align: center;
+}
+.good-left-pic {
+	width: 480px;
+	height: 480px;
+	margin: 0 auto;
+}
+
+.tb-pic a {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.tb-pic a img {
+	vertical-align: middle;
+	width: 100%;
+}
+
+.tb-pic a {
+	*display: block;
+	*font-family: Arial;
+	*line-height: 1;
+}
+
+.tb-thumb {
+	margin: 80px 20px 0;
+	overflow: hidden;
+}
+
+.tb-thumb li {
+	background: none repeat scroll 0 0 transparent;
+	float: left;
+	height: 66px;
+	margin: 0 6px 0 0;
+	overflow: hidden;
+	padding: 1px;
+}
+
+.tb-s310,
+.tb-s310 a {
+	height: 480px;
+	width: 480px;
+}
+
+.tb-s310,
+.tb-s310 img {
+	width: 400px;
+	max-height: 400px;
+}
+
+.tb-s310 a {
+	*font-size: 271px;
+}
+
+.tb-s40 a {
+	*font-size: 35px;
+}
+
+.tb-s40,
+.tb-s40 a {
+	height: 66px;
+	width: 66px;
+}
+
+.tb-booth {
+	position: relative;
+	z-index: 1;
+	margin:  0 auto;
+}
+
+.tb-thumb .tb-selected {
+	background: none repeat scroll 0 0 #C30008;
+	height: 66px;
+	padding: 2px;
+}
+
+.tb-thumb .tb-selected div {
+	background-color: #FFFFFF;
+	border: medium none;
+}
+
+.tb-thumb li div {
+	border: 1px solid #CDCDCD;
+}
+
+div.zoomDiv {
+	z-index: 999;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 200px;
+	background: #ffffff;
+	border: 1px solid #CCCCCC;
+	display: none;
+	text-align: center;
+	overflow: hidden;
+}
+
+div.zoomMask {
+	position: absolute;
+	background: url(../images/mask.png) repeat scroll 0 0 transparent;
+	cursor: move;
+	z-index: 1;
+}
+
+.good-right-intro{
+	font-family: "微软雅黑";
+	width: 620px;
+	height: 534px;
+	float: left;
+	padding: 20px 0;
+}
+.intro-tr{
+	margin-top: 25px;
+    padding-bottom: 8px;
+}
+.intro-tr strong{
+	color: #0e0e0e;
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+    max-height: 70px;
+    overflow: hidden;
+    width: 600px;
+}
+.intro-tr em{
+	color: #666;
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 85px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 600px;
+    margin-top: 10px;
+}
+.good-price {
+	width: 100%;
+	margin-top: 10px;
+}
+.good-price span{
+	background: #f8f8f8;
+    color: #fa5437;
+    width: 100%;
+    display: inline-block;
+    font-size: 36px;
+    font-style: normal;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 10px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+.inrto-gift{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.inrto-gift i{
+	height: 23px;
+    line-height: 23px;
+    background: #fa5437;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 9px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+}
+.inrto-gift a{
+	display: inline-block;
+    font-weight: 400;
+    margin-bottom: -4px;
+    max-width: 218px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.inrto-gift a:hover{
+	text-decoration: underline;
+}
+.inrto-gift em{
+	color: #a0a0a0;
+	display: inline;
+    font-style: normal;
+    padding: 0 40px;
+    font-size: 12px;
+    width: 50px;
+}
+.intro-category{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.intro-category span{
+	color: #848484;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 55px;
+}
+.intro-category ul{
+	float: left;
+	overflow: hidden;
+}
+.intro-category ul li{
+	float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.intro-category ul li a{
+	border: 1px #ddd solid;
+    color: #0e0e0e;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+.intro-category ul li a:hover{
+	border: 1px #fa5437 solid;
+    color: #fa5437;
+}
+.buy-count{
+	width: 143px;
+	height: 32px;
+	float: left;
+}
+.buy-count em{
+	border: 1px solid #E8E8E8;
+	float: left;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-family: simsun;
+    font-size: 16px;
+    overflow: hidden;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.buy-count em:hover{
+	color: #FA5437;
+}
+.buy-count .disabled{
+	color: #DDDDDD;
+}
+.buy-count input{
+	background: #fff;
+    border: 1px #ccc solid;
+    border-left: none;
+    border-right: none;
+    color: #000;
+    font-family: arial;
+    font-size: 13px;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
