@@ -112,12 +112,20 @@ $(document).ready(function(){
 		if ($(window).scrollTop()>=pDetailSCT && $(window).scrollTop()<= pDetailSCB) {
 			//滚动到详细介绍中的时候
 			$("#productDetailTip").addClass("active").siblings().removeClass("active");
-		}else if ($(window).scrollTop()>=pParamSCT && $(window).scrollTop()<= pParamSCB) {
+		}
+		if ($(window).scrollTop()>=pParamSCT && $(window).scrollTop()<= pParamSCB) {
 			//滚动到参数页面中时候
 			$("#pParamTip").addClass("active").siblings().removeClass("active");
-		}else if ($(window).scrollTop()>=pCommonQSCT && $(window).scrollTop()<= pCommomQSCB) {
+		}
+		if ($(window).scrollTop()>=pCommonQSCT && $(window).scrollTop()<= pCommomQSCB) {
 			//滚动到参数页面中时候
 			$("#commonQTip").addClass("active").siblings().removeClass("active");
+		}
+		//当不在范围内的时候就清除掉按钮的样式
+		else if ($(window).scrollTop()>pCommomQSCB || $(window).scrollTop() <pDetailSCT) {
+			if($(".nav-stair-wrap a").hasClass("active")){
+				$(".nav-stair-wrap a").removeClass("active");
+			}
 		}
 	});
 	
@@ -125,7 +133,12 @@ $(document).ready(function(){
 	$("#productDetailTip").on("click",function(){
 		$(window).scrollTop( Number($("#goProductDe").offset().top));
 	});
-	
+	$("#pParamTip").on("click",function(){
+		$(window).scrollTop( Number($("#pParam").offset().top)-50);
+	});
+	$("#commonQTip").on("click",function(){
+		$(window).scrollTop( Number($("#commonQ").offset().top)-50);
+	});
 	
 	
 	
@@ -148,3 +161,44 @@ $(document).ready(function(){
 	})
 });
 
+//根据商品的item_id来获取商品的介绍图片和基本信息
+
+function renderPageByID(id){
+	$.ajax({
+	type: "get",
+	async: true,
+	url: "http://localhost/phpStudy/getgoodinfo.php?item_id="+id,
+	dataType: "jsonp",
+	jsonp: "callback",
+	success: function(data){
+		if(data.success == 1){
+			//当返回的数据是成功数据的时候，进行解析
+			console.log(data);
+			document.title = data.title;
+			$("#productName").text(data.title);  //标题
+			$("#productPrice").text('￥'+data.price);  //价格
+			$("#goProductDe").html("");
+			for (key in data.introimg) {
+				$("#goProductDe").append('<img src="'+data.introimg[key]+'">');
+			}
+			
+		}
+	}
+})
+}
+
+
+
+//获取url中的参数方法
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+var itemId = GetQueryString("item_id")
+if(itemId !=null && itemId.toString().length>1)
+{
+   renderPageByID(itemId);
+}

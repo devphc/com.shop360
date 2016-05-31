@@ -17,13 +17,13 @@ function getGoods(page) {
 					<div class="list-product-card">\
 						<dl>\
 							<dt>\
-								<a href="#">\
+								<a href="showitem.html?item_id='+data.data.list[key].itemId+'" target="_blank">\
 									<img src="' + data.data.list[key].img + '"/>\
 									<span>' + data.data.list[key].itemId + '</span>\
 								</a>\
 							</dt>\
 							<dd>\
-								<a href="#">\
+								<a href="showitem.html?item_id='+data.data.list[key].itemId+'" target="_blank">\
 									<span>' + data.data.list[key].title + '</span>\
 									<b>' + data.data.list[key].price / 100 + '元</b>\
 								</a>\
@@ -60,15 +60,3 @@ $("#page").createPage({
 })
 
 
-//根据商品的item_id来获取商品的介绍图片和基本信息
-
-//$.ajax({
-//	type: "get",
-//	async: true,
-//	url: "http://localhost/shop360/php/getGoodInfo.php?item_id=55ebc8455efb1126118b4567",
-//	dataType: "jsonp",
-//	jsonp: "callback",
-//	success: function(data){
-//		console.log(data);
-//	}
-//})
