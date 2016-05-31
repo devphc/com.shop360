@@ -118,7 +118,7 @@ $(document).ready(function(){
 		}else if ($(window).scrollTop()>=pCommonQSCT && $(window).scrollTop()<= pCommomQSCB) {
 			//滚动到参数页面中时候
 			$("#commonQTip").addClass("active").siblings().removeClass("active");
-		} 
+		}
 	});
 	
 	
