@@ -440,13 +440,15 @@ div.zoomMask {
 }
 .nav-stair{
 	font-family: "微软雅黑";
-	width: 100$;
+	width: 100%;
 	height: 60px;
 	border: 1px solid #E8E8E8;
 	border-left: none;
 	border-right: none;
 	margin-top: 20px;
 	background: #FFFFFF;
+	top: 0;
+	left: 0;
 }
 .nav-stair-wrap{
 	width: 1240px;
@@ -459,6 +461,9 @@ div.zoomMask {
 	color: #31373c;
 	line-height: 60px;
 }
+.nav-stair-wrap .active{
+	color: #6ec177;
+}
 .nav-stair-wrap a:hover{
 	color: #6ec177;
 }
@@ -466,6 +471,30 @@ div.zoomMask {
 	content: "/";
 	color: #DCDCDC;
 	margin: 0 15px;
+}
+.nav-stair-wrap .chart{
+	float: right;
+	width: 240px;
+	height: 50px;
+	background: #fd532d;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.nav-stair-wrap .chart i{
+	background: url(http://p3.qhimg.com/t01eb758e784660b859.png) no-repeat;
+    float: left;
+    height: 20px;
+    width: 20px;
+    margin-top: 15px;
+    margin-left: 70px;
+  	
+}
+.nav-stair-wrap .chart span{
+	float: left;
+	font-size: 13px;
+	color: #FFFFFF;
+	line-height: 50px;
+	margin-left: 5px;
 }
 .product-detail{
 	width: 1000px;
@@ -495,4 +524,48 @@ div.zoomMask {
 .product-param img{
 	width: 100%;
 }
+.commonQ{
+	width: 1000px;
+	overflow: hidden;
+	margin:10px auto 0;
+	font-family: "微软雅黑";
+}
+.commonQ dl{
+	width: 100%;
+	overflow: hidden;
+}
+.commonQ dl i{
+	background: url(http://p0.qhimg.com/t0147bb66948b7f6357.png) left top no-repeat;
+    display: inline-block;
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 35px;
+}
+.commonQ dl dt{
+	width: 100%;
+	overflow: hidden;
+}
+.commonQ dl dt b{
+	font-weight: 700;
+	display: inline-block;
+	font-size: 18px;
+	width: 35px;
+}
+.commonQ dl dt span{
+	color: #333;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.commonQ dl dd{
+	color: #666;
+    margin: 20px 0;
+    padding: 0 0 15px 38px;
+}
+.commonQ dl dd span{
+	font-size: 13px;
+}
+
 

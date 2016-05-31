@@ -1,5 +1,7 @@
 //加载头部文件
 loadHtml("./html/header.html",".webHeader");
+//加载底部文件
+loadHtml("./html/footer.html",".webFooter");
 //展示图
 $(function(){
 	$(".jqzoom").imagezoom();
@@ -98,5 +100,44 @@ $("#num_plus").on("click",function(){
 	$("#goodNum").val( Number($("#goodNum").val())+1);
 });
 
+//滚动展示楼梯效果
+$(document).ready(function(){
+	var pDetailSCT = Number($(".product-detail").offset().top),
+		pDetailSCB = pDetailSCT + parseInt($(".product-detail").css("height")),
+		pParamSCT = Number($("#pParam").offset().top),
+		pParamSCB = pParamSCT + parseInt($("#pParam").css("height"))+parseInt($(".product-param").css("height")),
+		pCommonQSCT = Number($("#commonQ").offset().top),
+		pCommomQSCB = pCommonQSCT + parseInt($("#commonQ").css("height")) + parseInt($(".commonQ").css("height"));
+	$(window).scroll(function(){
+		if ($(window).scrollTop()>=pDetailSCT && $(window).scrollTop()<= pDetailSCB) {
+			//滚动到详细介绍中的时候
+			$("#productDetailTip").addClass("active").siblings().removeClass("active");
+		}else if ($(window).scrollTop()>=pParamSCT && $(window).scrollTop()<= pParamSCB) {
+			//滚动到参数页面中时候
+			$("#pParamTip").addClass("active").siblings().removeClass("active");
+		}else if ($(window).scrollTop()>=pCommonQSCT && $(window).scrollTop()<= pCommomQSCB) {
+			//滚动到参数页面中时候
+			$("#commonQTip").addClass("active").siblings().removeClass("active");
+		} 
+	});
+	
+	
+});
 
+//楼梯吸顶
+$(document).ready(function(){
+	var stairT = parseInt($(".nav-stair").offset().top);
+	var stairH = parseInt($(".nav-stair").css("height"));
+	$(window).scroll(function(){
+		if ($(window).scrollTop() >= stairT) {
+			$(".nav-stair").addClass("top-navbar-absolute");
+			$(".nav-stair").css({"margin-top": "0"});
+			$(document.body).css({"margin-top":stairH});
+		}else{
+			$(".nav-stair").removeClass("top-navbar-absolute");
+			$(".nav-stair").css({"margin-top": "20"});
+			$(document.body).css({"margin-top":0});
+		}
+	})
+});
 
