@@ -121,6 +121,13 @@ $(document).ready(function(){
 		}
 	});
 	
+	//当点击对应的楼层按钮的时候跳转到对应的楼层
+	$("#productDetailTip").on("click",function(){
+		$(window).scrollTop( Number($("#goProductDe").offset().top));
+	});
+	
+	
+	
 	
 });
 
