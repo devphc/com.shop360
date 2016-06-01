@@ -65,8 +65,14 @@ $("#productsList").on("mouseenter", "li", function() {
 })
 
 //点击购买事件
+var successTipTimer = 0;
 $("#addToCart").on("click", "a", function() {
 	buybuybuy(oGood);
+	clearTimeout(successTipTimer);
+	$("#addSuccTips").fadeIn();
+	successTipTimer = setTimeout(function(){
+		$("#addSuccTips").fadeOut();
+	},1000);
 })
 
 //展示页码

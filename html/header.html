@@ -11,16 +11,31 @@
 		</div>
 		<div class="top-bar-right">
 			<ul>
-				<li><a href="#">登录</a></li>
-				<li><a href="#">注册</a></li>
+				<li id="logedUser"><a href=""> 132****9813</a></li>
+				<li class="noLogop"><a href="./login.html">登录</a></li>
+				<li class="noLogop"><a href="./signin.html">注册</a></li>
 				<li><a href="#">F码购买</a></li>
 				<li class="top-shade-phone"><a href="#">手机360商城</a></li>
 				<li><a href="#">我的订单</a></li>
 				<li class="active chart">
 					<i></i><a href="#">购物车(<span id="topCartCount">0</span>)</a>
 					<div class="show-chart">
-						<div class="char-tips">
-							请登录后查看您的购物车
+						<div id="noLoginCart" class="char-tips">
+							<a href="./login.html" style="color: #000000;">请登录后查看您的购物车</a>
+						</div>
+						<div id="topCartInfo" class="top-cart-info">
+							<ul id="topCartContainer">
+								<li>
+									<strong>这里什么也没有</strong>
+								</li>
+							</ul>
+							<div class="go-pay-box">
+								<div class="go-pay">
+									<a id="goToDo" href="./shopcart.html">
+										<em>去结账</em>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</li>

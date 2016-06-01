@@ -16,32 +16,32 @@ $("#searchbox").blur(function(){
 
 
 //二级菜单的展示
-//var hideClock = null;
-//function showSecondMenu(){
-//	$("#secondNav").slideDown();
-//}
-//function hideSecondMenu(){
-//	$("#secondNav").slideUp();
-//}
-//$(".top-nav-bar ul li:lt(5)").on("mouseover",function(){
-//	//调用修改二级标签的函数
-//	cgSecNavCont($(this).attr("currNav"));
-//	//清楚隐藏的定时器
-//	clearTimeout(hideClock);
-//	//展示二级界面
-//	showSecondMenu();
-//	//当二级界面被鼠标滑过的时候也会被保持显示
-//	$("#secondNav").on("mouseover",function(){
-//		clearTimeout(hideClock);
-//	});
-//	$("#secondNav").on("mouseleave",function(){
-//		hideClock = setTimeout(hideSecondMenu,500);
-//	});
-//	
-//});
-//$(".top-nav-bar ul li:lt(5)").on("mouseleave",function(){
-//	hideClock = setTimeout(hideSecondMenu,500);
-//});
+var hideClock = null;
+function showSecondMenu(){
+	$("#secondNav").slideDown();
+}
+function hideSecondMenu(){
+	$("#secondNav").slideUp();
+}
+$(".top-nav-bar ul li:lt(5)").on("mouseover",function(){
+	//调用修改二级标签的函数
+	cgSecNavCont($(this).attr("currNav"));
+	//清楚隐藏的定时器
+	clearTimeout(hideClock);
+	//展示二级界面
+	showSecondMenu();
+	//当二级界面被鼠标滑过的时候也会被保持显示
+	$("#secondNav").on("mouseover",function(){
+		clearTimeout(hideClock);
+	});
+	$("#secondNav").on("mouseleave",function(){
+		hideClock = setTimeout(hideSecondMenu,500);
+	});
+	
+});
+$(".top-nav-bar ul li:lt(5)").on("mouseleave",function(){
+	hideClock = setTimeout(hideSecondMenu,500);
+});
 
 //修改二级标签中的内容的函数
 function cgSecNavCont(currNav) {
@@ -91,7 +91,7 @@ function loadHtml(url,target){
 function getCount(oCart){
 	var count = 0;
 	for (key in oCart) {
-		count++;
+		count += parseInt(oCart[key].number);
 	}
 	return count;
 }
@@ -99,7 +99,52 @@ function getCount(oCart){
 //修改顶部购物车中商品的数量
 $(document).ready(function(){
 	$("#topCartCount").text($.cookie("cartcount"));
+	
+	//判断是否登录如果登录，那么就展示购物车中的内容
+	if ($.cookie("user")) {
+		$("#noLoginCart").hide();
+		
+		//展示购物车中的内容
+		if ($.cookie("cart")) {
+			showCartByCookies();
+			$("#goToDo").prop("href","shopcart.html");
+			$("#goToDo em").text("去结算");
+		} else{
+			$("#goToDo").prop("href","goodsList.html");
+			$("#goToDo em").text("去购物");
+		}
+		
+		//如果用户已经登录，就展示登录的内容，隐藏登录注册按钮
+		
+		
+		$(".noLogop").hide();
+		$("#logedUser a").text(cutAPhone(JSON.parse($.cookie("user")).phone));
+		$("#logedUser").show();
+		
+		$("#topCartInfo").show();
+	}else{
+		$("#noLoginCart").show();
+		$("#topCartInfo").hide();
+		
+		//隐藏用户内容，展示登录注册按钮
+		$(".noLogop").show();
+		$("#logedUser").hide();
+	}
 });
+//展示购物车中的数据的函数
+function showCartByCookies(){
+	var oCart = JSON.parse($.cookie("cart"));
+			$("#topCartContainer").html("");
+			for (key in oCart) {
+				$("#topCartContainer").append('<li>\
+									<img src="'+ oCart[key].image +'"/>\
+									<span class="title">'+ oCart[key].name +'</span>\
+									<span class="count">'+ oCart[key].number +'</span>\
+									<span class="price">'+ oCart[key].number * oCart[key].price +'.00</span>\
+								</li>');
+			}
+}
+
 
 //将商品信息写入cookie的函数
 function buybuybuy(oGood) {
@@ -123,4 +168,14 @@ function buybuybuy(oGood) {
 
 	//	更新购物车数量
 	$("#topCartCount").text($.cookie("cartcount"));
+	
+	//更新顶部购物车的内容
+	showCartByCookies();
+}
+
+//剪切一个手机号,用**隐藏
+function cutAPhone(phoneStr){
+	var beginStr = phoneStr.substring(0,3);
+	var endStr = phoneStr.substr(-4);
+	return (beginStr+"****"+endStr);
 }

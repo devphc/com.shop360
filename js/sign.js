@@ -65,6 +65,10 @@ $("#nextBtn").on("click", function() {
 			path: '/',
 			expires: 1
 		})
+		//展示操作成功页面
+		$(".docBg").addClass("success-opc");
+		$("#successTips").show();
+
 	} 
 
 });
@@ -89,6 +93,10 @@ $("#loginBtn").on("click", function() {
 			path: '/',
 			expires: 1
 		})
+		
+		//展示操作成功页面
+		$(".docBg").addClass("success-opc");
+		$("#successTips").show();
 
 	} else {
 		$("#phoneTip").text("用户名或密码错误");

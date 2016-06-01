@@ -9,6 +9,9 @@ body,html{
 	font-family: "微软雅黑";
 	height: 100%;
 }
+.success-opc{
+	opacity: .5;
+}
 .regHeader{
 	background: #e8e8e8;
     padding: 10px 0;
@@ -150,4 +153,35 @@ body,html{
 }
 .allow_reg span{
 	font-size: 11px;
+}
+.fixed-success-tip{
+	font-family: "微软雅黑";
+	position: fixed;
+	width: 500px;
+	height: 300px;
+	background: rgb(245,245,245);
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+	margin-top: -150px;
+	border-radius:10px ;
+	display: none;
+}
+.fixed-success-tip h4{
+	font-size: 18px;
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #FFFFFF;
+	line-height: 50px;
+	text-align: center;
+}
+.fixed-success-tip .content{
+	width: 300px;
+	text-align: center;
+	padding: 100px;
+}
+.fixed-success-tip .content a{
+	font-size: 16px;
 }

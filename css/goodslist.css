@@ -173,3 +173,21 @@ body{
 	background: url(http://p8.qhimg.com/t01ae1c5aba7b8e126a.gif) no-repeat;
     text-indent: -999em;
 }
+.add-success-tips{
+	font-family: "微软雅黑";
+	width: 300px;
+	height: 100px;
+	border-radius: 10px;
+	background: rgba(155,48,250,.7);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -50px;
+	z-index: 5;
+	line-height: 100px;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+	display: none;
+}

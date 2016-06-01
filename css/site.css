@@ -84,7 +84,67 @@
 	text-align: center;
 	font-family: "微软雅黑";
 }
-
+.top-cart-info{
+	width: 100%;
+	overflow: hidden;
+	font-family: "微软雅黑";
+}
+.top-cart-info ul{
+	width: 100%;
+	overflow: hidden;
+}
+.top-cart-info ul li{
+	height: 60px;
+	padding: 10px;
+	border-bottom: 1px dotted #E8E8E8;
+}
+.top-cart-info ul li img{
+	float: left;
+	width: 60px;
+}
+.top-cart-info ul li span{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-top: 10px;
+}
+.top-cart-info ul li strong{
+	display: block;
+	width: 350px;
+	text-align: center;
+}
+.top-cart-info .title{
+	width: 140px;
+}
+.top-cart-info .count{
+	width: 30px;
+}
+.top-cart-info .price{
+	width: 75px;
+}
+.go-pay-box{
+	width: 100%;
+	height: 60px;
+	background: #f4f4f4;
+}
+.go-pay-box span{
+	line-height: 60px;
+	font-size: 13px;
+}
+.go-pay{
+	padding: 10px;
+}
+.go-pay a{
+	float: right;
+	width: 103px;
+	height: 40px;
+	background: #72b91a;
+}
+.go-pay a em{
+	color: #FFFFFF;
+	font-size: 14px;
+}
 .top-advertise{
 	width: 100%;
 	overflow: hidden;
@@ -429,4 +489,7 @@
 	color: #848484;
 	line-height: 22px;
 	font-family: "微软雅黑";
+}
+.select-not-all{
+	-webkit-user-select: none;
 }
