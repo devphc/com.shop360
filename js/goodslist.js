@@ -41,26 +41,26 @@ getGoods(0);
 var oGood = null;
 
 $("#productsList").on("mouseenter", "li", function() {
-		//设置一个object类型，其中包含商品的基本信息
-		var iPrice = parseInt($(this).find(".oGoodPrice").text());
-		var iName = $(this).find(".oGoodName").text();
-		var iID = $(this).find(".oGoodId").text();
-		oGood = {
-			"goodid": iID,
-			"name": iName,
-			"price": String(iPrice),
-			"number": 1
-		};
+	//设置一个object类型，其中包含商品的基本信息
+	var iPrice = parseInt($(this).find(".oGoodPrice").text());
+	var iName = $(this).find(".oGoodName").text();
+	var iID = $(this).find(".oGoodId").text();
+	oGood = {
+		"goodid": iID,
+		"name": iName,
+		"price": String(iPrice),
+		"number": 1
+	};
 
-		//设置购买按钮的位置，并且赋给当前按钮当前的商品id值
-		iLeft = $(this).offset().left - $(this).parent().offset().left - 1;
-		iTop = $(this).offset().top + parseInt($(this).css("height")) - $(this).parent().offset().top;
-		$("#addToCart").show();
-		$("#addToCart").css({
-			left: iLeft,
-			top: iTop
-		});
-	})
+	//设置购买按钮的位置，并且赋给当前按钮当前的商品id值
+	iLeft = $(this).offset().left - $(this).parent().offset().left - 1;
+	iTop = $(this).offset().top + parseInt($(this).css("height")) - $(this).parent().offset().top;
+	$("#addToCart").show();
+	$("#addToCart").css({
+		left: iLeft,
+		top: iTop
+	});
+})
 
 //点击购买事件
 $("#addToCart").on("click", "a", function() {
@@ -90,16 +90,13 @@ function buybuybuy(oGood) {
 		path: '/',
 		expires: 1
 	});
-	console.log(getCount(oCartGoods));
+
+	//设置购物车中商品的数量
+	$.cookie("cartcount", getCount(oCartGoods), {
+		path: '/',
+		expires: 1
+	});
+
+	//	更新购物车数量
+	$("#topCartCount").text($.cookie("cartcount"));
 }
-
-//获取一个object中的条目数量
-function getCount(oCart){
-	var count = 0;
-	for (key in oCart) {
-		count++;
-	}
-	return count;
-}
-
-

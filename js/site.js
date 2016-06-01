@@ -87,5 +87,40 @@ function loadHtml(url,target){
 	});
 }
 
+//获取一个object中的条目数量
+function getCount(oCart){
+	var count = 0;
+	for (key in oCart) {
+		count++;
+	}
+	return count;
+}
 
+//修改顶部购物车中商品的数量
+$(document).ready(function(){
+	$("#topCartCount").text($.cookie("cartcount"));
+});
 
+//将商品信息写入cookie的函数
+function buybuybuy(oGood) {
+	var cartGoods = $.cookie('cart') ? $.cookie('cart') : '{}';
+	var oCartGoods = JSON.parse(cartGoods);
+	if (oGood.goodid in oCartGoods) {
+		oCartGoods[oGood.goodid].number += 1;
+	} else {
+		oCartGoods[oGood.goodid] = oGood;
+	}
+	$.cookie("cart", JSON.stringify(oCartGoods), {
+		path: '/',
+		expires: 1
+	});
+
+	//设置购物车中商品的数量
+	$.cookie("cartcount", getCount(oCartGoods), {
+		path: '/',
+		expires: 1
+	});
+
+	//	更新购物车数量
+	$("#topCartCount").text($.cookie("cartcount"));
+}
