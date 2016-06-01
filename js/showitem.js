@@ -131,13 +131,13 @@ $(document).ready(function(){
 	
 	//当点击对应的楼层按钮的时候跳转到对应的楼层
 	$("#productDetailTip").on("click",function(){
-		$(window).scrollTop( Number($("#goProductDe").offset().top));
+		$("html,body").animate({scrollTop:Number($("#goProductDe").offset().top)});
 	});
 	$("#pParamTip").on("click",function(){
-		$(window).scrollTop( Number($("#pParam").offset().top)-50);
+		$("html,body").animate({scrollTop:Number($("#pParam").offset().top)-50});
 	});
 	$("#commonQTip").on("click",function(){
-		$(window).scrollTop( Number($("#commonQ").offset().top)-50);
+		$("html,body").animate({scrollTop:Number($("#commonQ").offset().top)-50});
 	});
 	
 	

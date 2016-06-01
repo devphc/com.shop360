@@ -16,32 +16,32 @@ $("#searchbox").blur(function(){
 
 
 //二级菜单的展示
-var hideClock = null;
-function showSecondMenu(){
-	$("#secondNav").slideDown();
-}
-function hideSecondMenu(){
-	$("#secondNav").slideUp();
-}
-$(".top-nav-bar ul li:lt(5)").on("mouseover",function(){
-	//调用修改二级标签的函数
-	cgSecNavCont($(this).attr("currNav"));
-	//清楚隐藏的定时器
-	clearTimeout(hideClock);
-	//展示二级界面
-	showSecondMenu();
-	//当二级界面被鼠标滑过的时候也会被保持显示
-	$("#secondNav").on("mouseover",function(){
-		clearTimeout(hideClock);
-	});
-	$("#secondNav").on("mouseleave",function(){
-		hideClock = setTimeout(hideSecondMenu,500);
-	});
-	
-});
-$(".top-nav-bar ul li:lt(5)").on("mouseleave",function(){
-	hideClock = setTimeout(hideSecondMenu,500);
-});
+//var hideClock = null;
+//function showSecondMenu(){
+//	$("#secondNav").slideDown();
+//}
+//function hideSecondMenu(){
+//	$("#secondNav").slideUp();
+//}
+//$(".top-nav-bar ul li:lt(5)").on("mouseover",function(){
+//	//调用修改二级标签的函数
+//	cgSecNavCont($(this).attr("currNav"));
+//	//清楚隐藏的定时器
+//	clearTimeout(hideClock);
+//	//展示二级界面
+//	showSecondMenu();
+//	//当二级界面被鼠标滑过的时候也会被保持显示
+//	$("#secondNav").on("mouseover",function(){
+//		clearTimeout(hideClock);
+//	});
+//	$("#secondNav").on("mouseleave",function(){
+//		hideClock = setTimeout(hideSecondMenu,500);
+//	});
+//	
+//});
+//$(".top-nav-bar ul li:lt(5)").on("mouseleave",function(){
+//	hideClock = setTimeout(hideSecondMenu,500);
+//});
 
 //修改二级标签中的内容的函数
 function cgSecNavCont(currNav) {

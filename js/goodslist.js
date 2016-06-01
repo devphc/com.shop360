@@ -17,15 +17,15 @@ function getGoods(page) {
 					<div class="list-product-card">\
 						<dl>\
 							<dt>\
-								<a href="showitem.html?item_id='+data.data.list[key].itemId+'" target="_blank">\
+								<a href="showitem.html?item_id=' + data.data.list[key].itemId + '" target="_blank">\
 									<img src="' + data.data.list[key].img + '"/>\
-									<span>' + data.data.list[key].itemId + '</span>\
+									<span class="oGoodId">' + data.data.list[key].itemId + '</span>\
 								</a>\
 							</dt>\
 							<dd>\
-								<a href="showitem.html?item_id='+data.data.list[key].itemId+'" target="_blank">\
-									<span>' + data.data.list[key].title + '</span>\
-									<b>' + data.data.list[key].price / 100 + '元</b>\
+								<a href="showitem.html?item_id=' + data.data.list[key].itemId + '" target="_blank">\
+									<span class="oGoodName">' + data.data.list[key].title + '</span>\
+									<b class="oGoodPrice">' + data.data.list[key].price / 100 + '元</b>\
 								</a>\
 							</dd>\
 						</dl>\
@@ -38,7 +38,19 @@ function getGoods(page) {
 }
 getGoods(0);
 //鼠标滑过li之后，出现购买按钮
+var oGood = null;
+
 $("#productsList").on("mouseenter", "li", function() {
+		//设置一个object类型，其中包含商品的基本信息
+		var iPrice = parseInt($(this).find(".oGoodPrice").text());
+		var iName = $(this).find(".oGoodName").text();
+		var iID = $(this).find(".oGoodId").text();
+		oGood = {
+			"goodid": iID,
+			"name": iName,
+			"price": String(iPrice),
+			"number": 1
+		};
 
 		//设置购买按钮的位置，并且赋给当前按钮当前的商品id值
 		iLeft = $(this).offset().left - $(this).parent().offset().left - 1;
@@ -49,7 +61,13 @@ $("#productsList").on("mouseenter", "li", function() {
 			top: iTop
 		});
 	})
-	//展示页码
+
+//点击购买事件
+$("#addToCart").on("click", "a", function() {
+	buybuybuy(oGood);
+})
+
+//展示页码
 
 $("#page").createPage({
 	pageCount: 50,
@@ -58,5 +76,30 @@ $("#page").createPage({
 		getGoods(number - 1);
 	}
 })
+
+//写入cookie的函数
+function buybuybuy(oGood) {
+	var cartGoods = $.cookie('cart') ? $.cookie('cart') : '{}';
+	var oCartGoods = JSON.parse(cartGoods);
+	if (oGood.goodid in oCartGoods) {
+		oCartGoods[oGood.goodid].number += 1;
+	} else {
+		oCartGoods[oGood.goodid] = oGood;
+	}
+	$.cookie("cart", JSON.stringify(oCartGoods), {
+		path: '/',
+		expires: 1
+	});
+	console.log(getCount(oCartGoods));
+}
+
+//获取一个object中的条目数量
+function getCount(oCart){
+	var count = 0;
+	for (key in oCart) {
+		count++;
+	}
+	return count;
+}
 
 

@@ -1,5 +1,5 @@
 <?php
-
+	error_reporting(E_ALL || ~E_NOTICE);
     //通过id值来获取商品列表的图片的数组
     function getGoodImages($item_id){
         $url = "http://mall.360.com/shop/item?item_id=".$item_id;
