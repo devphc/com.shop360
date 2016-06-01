@@ -167,7 +167,7 @@ function renderPageByID(id){
 	$.ajax({
 	type: "get",
 	async: true,
-	url: "http://localhost/phpStudy/getgoodinfo.php?item_id="+id,
+	url: "php/getGoodInfo.php?item_id="+id,
 	dataType: "jsonp",
 	jsonp: "callback",
 	success: function(data){

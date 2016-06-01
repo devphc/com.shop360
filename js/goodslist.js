@@ -18,7 +18,7 @@ function getGoods(page) {
 						<dl>\
 							<dt>\
 								<a href="showitem.html?item_id=' + data.data.list[key].itemId + '" target="_blank">\
-									<img src="' + data.data.list[key].img + '"/>\
+									<img class="oGoodImg" src="' + data.data.list[key].img + '"/>\
 									<span class="oGoodId">' + data.data.list[key].itemId + '</span>\
 								</a>\
 							</dt>\
@@ -45,10 +45,12 @@ $("#productsList").on("mouseenter", "li", function() {
 	var iPrice = parseInt($(this).find(".oGoodPrice").text());
 	var iName = $(this).find(".oGoodName").text();
 	var iID = $(this).find(".oGoodId").text();
+	var iImg = $(this).find(".oGoodImg").attr("src");
 	oGood = {
 		"goodid": iID,
 		"name": iName,
 		"price": String(iPrice),
+		"image": iImg,
 		"number": 1
 	};
 

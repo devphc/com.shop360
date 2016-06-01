@@ -1,0 +1,153 @@
+body,html{
+	height: 100%;
+}
+.docBg{
+	background: rgb(245, 245, 245);;
+	width: 100%;
+	overflow: hidden;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	height: 100%;
+}
+.regHeader{
+	background: #e8e8e8;
+    padding: 10px 0;
+    overflow: hidden;
+    width: 100%;
+}
+.header-container{
+	margin: 0 auto;
+	width: 700px;
+	height: 48px;
+}
+.header-container .logo{
+	height: 48px;
+    margin-right: 25px;
+    width: 168px
+}
+.page-title{
+	border-left: 1px solid #929292;
+    color: #222;
+    font-size: 20px;
+    height: 30px;
+    line-height: 48px;
+    padding-left: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.page-title:hover{
+	color: #22ac69;
+}
+.switch-login{
+	line-height: 48px;
+	font-size: 14px;
+	float: right;
+	width: 30px;
+	color: #333333;
+	height: 48px;
+}
+.regWrap{
+	width: 700px;
+	overflow: hidden;
+	background: #FFFFFF;
+	margin: 60px auto 10px;
+	min-height: 550px;
+}
+.reg-title{
+	background: #fff;
+    border-bottom: 2px solid #f5f5f5;
+    color: #222;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.reg-main{
+	width: 380px;
+	height: 400px;
+    margin: 50px auto 0;
+}
+.form-field{
+	background: #fff;
+	color: #959393;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    height: 42px;
+}
+.form-field .active{
+	border: 1px solid #22ac69;
+}
+.usernameico{
+	background: url(../images/ico-sign-username.png) no-repeat center;
+	display: inline-block;
+    height: 42px;
+    margin: 0 8px;
+    vertical-align: middle;
+    width: 18px;
+}
+.passwordico{
+	background: url(../images/uc-password-icon.png) no-repeat center;
+	display: inline-block;
+    height: 42px;
+    margin: 0 8px;
+    vertical-align: middle;
+    width: 18px;
+}
+.usernamform{
+    border: 0;
+    line-height: 42px;
+    outline: none;
+    color: #959393;
+    width: 320px;
+    font-size: 14px;
+}
+.errortips{
+	display: block;
+	visibility: hidden;
+    height: 20px;
+    margin: 7px 0;
+    color: #FF0000;
+}
+.form-field-vierfy{
+	width: 250px;
+	background: #fff;
+	color: #959393;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    height: 42px;
+    float: left;
+}
+.virfy-box img{
+	float: right;
+	cursor: pointer;
+}
+.veirfycode{
+	width: 248px;
+	border: 0;
+    line-height: 42px;
+    outline: none;
+    color: #959393;
+    font-size: 14px;
+    text-indent: 20px;
+}
+.next-btn{
+	background: #22ac69;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+}
+.allow_reg{
+	margin-top: 10px;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.allow_reg span{
+	font-size: 11px;
+}

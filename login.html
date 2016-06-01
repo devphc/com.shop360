@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-360个人中心</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/signin.css" />
+	</head>
+
+	<body>
+		<div class="docBg">
+			<div class="regHeader">
+				<div class="header-container">
+					<a href="index.html" class="header-logo">
+						<img src="images/uc-i360-logo.png" />
+					</a>
+					<span class="page-title">
+						登录帐号
+					</span>
+					<a href="signin.html" class="switch-login">注册</a>
+				</div>
+			</div>
+			<div class="regWrap">
+				<div class="reg-title">
+					登录360商城
+				</div>
+				<div class="reg-main">
+					<div class="form-field">
+						<span class="usernameico"></span>
+						<input type="text" id="phoneNum" value="" placeholder="请输入您注册的手机号" class="usernamform" />
+					</div>
+					<span id="phoneTip" class="errortips">登录帐号错误</span>
+					<div class="form-field">
+						<span class="passwordico"></span>
+						<input type="password" id="passWord" value="" placeholder="密码请输入6-20个字符" class="usernamform" />
+					</div>
+					<span id="passWordTip" class="errortips">密码长度不符合</span>
+					<div class="virfy-box">
+						<div class="form-field-vierfy">
+							<input type="text"  value="" placeholder="请输入验证码" class="veirfycode" />
+						</div>
+						<img id="identCode" src="http://passport.360.cn/captcha.php?m=create&app=i360&scene=strictreg&userip=&level=default&sign=5a63a7&r=1464782188&_=1464782207280" />
+					</div>
+					<span class="errortips">验证码输入错误</span>
+					
+					<a id="loginBtn" href="javascrpt:void(0)" class="next-btn">登录</a>
+					
+					<p class="allow_reg">
+						<span>点击“登录”，即表示您已同意并愿意遵守《360用户服务条款》</span>
+					</p>
+				</div>
+			</div>
+
+		</div>
+		
+		<script src="js/jquery-1.12.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sign.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
