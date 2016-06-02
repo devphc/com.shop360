@@ -171,7 +171,7 @@ function renderPageByID(id) {
 	$.ajax({
 		type: "get",
 		async: true,
-		url: "http://localhost/php/getGoodInfo.php?item_id=" + id,
+		url: "/php/getGoodInfo.php?item_id=" + id,
 		dataType: "jsonp",
 		jsonp: "callback",
 		success: function(data) {
@@ -336,4 +336,11 @@ function buybuybuy(oGood) {
 	
 	//更新顶部购物车的内容
 	showCartByCookies();
+}
+
+//剪切一个手机号,用**隐藏
+function cutAPhone(phoneStr){
+	var beginStr = phoneStr.substring(0,3);
+	var endStr = phoneStr.substr(-4);
+	return (beginStr+"****"+endStr);
 }
