@@ -151,7 +151,7 @@ function buybuybuy(oGood) {
 	var cartGoods = $.cookie('cart') ? $.cookie('cart') : '{}';
 	var oCartGoods = JSON.parse(cartGoods);
 	if (oGood.goodid in oCartGoods) {
-		oCartGoods[oGood.goodid].number += 1;
+		oCartGoods[oGood.goodid].number += oGood.number;
 	} else {
 		oCartGoods[oGood.goodid] = oGood;
 	}

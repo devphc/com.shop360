@@ -162,6 +162,7 @@ $(document).ready(function() {
 			});
 		}
 	})
+	
 });
 
 //根据商品的item_id来获取商品的介绍图片和基本信息
@@ -170,7 +171,7 @@ function renderPageByID(id) {
 	$.ajax({
 		type: "get",
 		async: true,
-		url: "http://localhost/phpStudy/getgoodinfo.php?item_id=" + id,
+		url: "http://localhost/php/getGoodInfo.php?item_id=" + id,
 		dataType: "jsonp",
 		jsonp: "callback",
 		success: function(data) {
@@ -179,7 +180,7 @@ function renderPageByID(id) {
 				console.log(data);
 				document.title = data.title;
 				$("#productName").text(data.title); //标题
-				$("#productPrice").text('￥' + data.price); //价格
+				$("#productPrice").text( data.price); //价格
 				$("#goProductDe").html("");
 				$("#thumblist").html("");
 				//展示介绍图片
@@ -215,16 +216,124 @@ function renderPageByID(id) {
 		}
 	})
 }
-
+var iProductId = null;
 //获取url中的参数方法
 function GetQueryString(name) {
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
 	var r = window.location.search.substr(1).match(reg);
-	if (r != null) return unescape(r[2]);
+	if (r != null){
+		iProductId = unescape(r[2]);
+		return unescape(r[2]);
+	}
 	return null;
 }
 
 var itemId = GetQueryString("item_id")
 if (itemId != null && itemId.toString().length > 1) {
 	renderPageByID(itemId);
+}
+
+//当点击加入购物车按钮之后
+$(".item-show-addtocart").on("click",function(){
+	var iNum= $("#goodNum").val();
+	var iPrice = parseInt($("#productPrice").text());
+	var iImg = $("#thumblist li div a img").eq(0).attr("src");
+	var iTitle = $("#productName").text();
+	
+	var oGood = {
+		"goodid": iProductId,
+		"name": iTitle,
+		"price": iPrice,
+		"image": iImg,
+		"number": iNum
+	}
+	buybuybuy(oGood);
+	
+});
+
+
+//获取一个object中的条目数量
+function getCount(oCart){
+	var count = 0;
+	for (key in oCart) {
+		count += parseInt(oCart[key].number);
+	}
+	return count;
+}
+
+//修改顶部购物车中商品的数量
+$(document).ready(function(){
+	$("#topCartCount").text($.cookie("cartcount"));
+	
+	//判断是否登录如果登录，那么就展示购物车中的内容
+	if ($.cookie("user")) {
+		$("#noLoginCart").hide();
+		
+		//展示购物车中的内容
+		if ($.cookie("cart")) {
+			showCartByCookies();
+			$("#goToDo").prop("href","shopcart.html");
+			$("#goToDo em").text("去结算");
+		} else{
+			$("#goToDo").prop("href","goodsList.html");
+			$("#goToDo em").text("去购物");
+		}
+		
+		//如果用户已经登录，就展示登录的内容，隐藏登录注册按钮
+		
+		
+		$(".noLogop").hide();
+		$("#logedUser a").text(cutAPhone(JSON.parse($.cookie("user")).phone));
+		$("#logedUser").show();
+		
+		$("#topCartInfo").show();
+	}else{
+		$("#noLoginCart").show();
+		$("#topCartInfo").hide();
+		
+		//隐藏用户内容，展示登录注册按钮
+		$(".noLogop").show();
+		$("#logedUser").hide();
+	}
+});
+//展示购物车中的数据的函数
+function showCartByCookies(){
+	var oCart = JSON.parse($.cookie("cart"));
+			$("#topCartContainer").html("");
+			for (key in oCart) {
+				$("#topCartContainer").append('<li>\
+									<img src="'+ oCart[key].image +'"/>\
+									<span class="title">'+ oCart[key].name +'</span>\
+									<span class="count">'+ oCart[key].number +'</span>\
+									<span class="price">'+ oCart[key].number * oCart[key].price +'.00</span>\
+								</li>');
+			}
+}
+
+
+//将商品信息写入cookie的函数
+function buybuybuy(oGood) {
+	var cartGoods = $.cookie('cart') ? $.cookie('cart') : '{}';
+	var oCartGoods = JSON.parse(cartGoods);
+	if (oGood.goodid in oCartGoods) {
+		oCartGoods[oGood.goodid].number += 1;
+	} else {
+		oCartGoods[oGood.goodid] = oGood;
+	}
+	$.cookie("cart", JSON.stringify(oCartGoods), {
+		path: '/',
+		expires: 1
+	});
+
+	//设置购物车中商品的数量
+	$.cookie("cartcount", getCount(oCartGoods), {
+		path: '/',
+		expires: 1
+	});
+
+	//	更新购物车数量
+	$("#topCartCount").text($.cookie("cartcount"));
+	
+	//更新顶部购物车的内容
+	showCartByCookies();
 }
