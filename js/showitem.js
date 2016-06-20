@@ -171,7 +171,7 @@ function renderPageByID(id) {
 	$.ajax({
 		type: "get",
 		async: true,
-		url: "/php/getGoodInfo.php?item_id=" + id,
+		url: "./php/getGoodInfo.php?item_id=" + id,
 		dataType: "jsonp",
 		jsonp: "callback",
 		success: function(data) {
