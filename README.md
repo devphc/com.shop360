@@ -1,3 +1,6 @@
-# 360商城
-仿照360商城制作的商城主要页面
-~下个版本加入：在详情页面可以加入购物车功能，结算功能
+---
+title: 网页商城Demo
+tags: 商城,前端,javascript
+grammar_cjkRuby: true
+---
+
